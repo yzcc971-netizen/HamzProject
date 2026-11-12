@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071326">
+  <title>HamzProject.ID — OTP Console</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">H</span><span>HamzProject<span class="blue">.ID</span><small>OTP MANAGEMENT CONSOLE</small></span></a>
+    <span class="status"><i></i> SERVER DEMO</span>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">SECURE • SIMPLE • RESPONSIVE</div>
+        <h1>Kelola verifikasi<br><span class="gradient">dengan lebih rapi.</span></h1>
+        <p>Panel demo integrasi OTP untuk aplikasi yang kamu miliki atau kelola. Provider SMS belum dihubungkan.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#request">Coba mode demo <span>↗</span></a>
+          <a class="button ghost" href="#status">Lihat status API</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-top"><span>API STATUS</span><span class="pill amber">DEMO MODE</span></div>
+        <div class="pulse-icon">⌁</div>
+        <h2 id="serverState">Memeriksa server...</h2>
+        <p id="serverNote">Menghubungi backend HamzProject.</p>
+        <div class="meter"><span></span></div>
+        <div class="card-foot"><span>Backend</span><b>Node.js / Express</b></div>
+      </div>
+    </section>
+
+    <section class="stats" id="status">
+      <article class="stat"><span class="stat-icon">⌘</span><div><small>MODE</small><strong>Demo</strong></div></article>
+      <article class="stat"><span class="stat-icon">◎</span><div><small>PROVIDER</small><strong>Belum terhubung</strong></div></article>
+      <article class="stat"><span class="stat-icon">↗</span><div><small>WEBHOOK</small><strong>Endpoint tersedia</strong></div></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel" id="request">
+        <div class="section-head"><div><div class="eyebrow">OTP SANDBOX</div><h2>Uji alur permintaan</h2></div><span class="number">01</span></div>
+        <p class="muted">Form ini hanya membuat catatan demo. Tidak mengirim SMS dan tidak menyediakan nomor virtual.</p>
+        <form id="otpForm">
+          <label for="phone">Nomor telepon kamu</label>
+          <input id="phone" name="phone" type="tel" placeholder="+6281234567890" autocomplete="tel" required>
+          <label for="purpose">Keperluan</label>
+          <select id="purpose" name="purpose">
+            <option value="own-app-login">Login aplikasi milik sendiri</option>
+            <option value="own-app-verification">Verifikasi aplikasi milik sendiri</option>
+          </select>
+          <button class="button primary full" type="submit">Buat permintaan demo <span>→</span></button>
+          <div id="formResult" class="result" role="status" aria-live="polite">Permintaan demo akan muncul di sini.</div>
+        </form>
+      </article>
+
+      <article class="panel">
+        <div class="section-head"><div><div class="eyebrow">INTEGRATION</div><h2>Komponen sistem</h2></div><span class="number">02</span></div>
+        <div class="feature-list">
+          <div class="feature"><span class="feature-icon">⌘</span><div><b>Backend API</b><small>Endpoint aplikasi terpisah dari tampilan web.</small></div><span class="check">✓</span></div>
+          <div class="feature"><span class="feature-icon">♧</span><div><b>Webhook</b><small>Menerima status pengiriman dari provider resmi.</small></div><span class="check">✓</span></div>
+          <div class="feature"><span class="feature-icon">▣</span><div><b>Secret protection</b><small>Kunci API disimpan di environment server.</small></div><span class="check">✓</span></div>
+          <div class="feature"><span class="feature-icon">◈</span><div><b>Admin endpoint</b><small>Ringkasan dilindungi token admin.</small></div><span class="check">✓</span></div>
+        </div>
+        <div class="notice"><b>Catatan keamanan</b><br>Gunakan integrasi hanya untuk aplikasi yang kamu miliki atau kelola. Jangan masukkan OTP atau API key rahasia ke halaman web.</div>
+      </article>
+    </section>
+
+    <footer><span>© 2026 HamzProject.ID</span><span>Built for authorized OTP workflows</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
